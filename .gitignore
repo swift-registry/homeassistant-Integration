@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# CodeBuddy 项目数据（不应进入 HACS 仓库）
+.codebuddy/
+
+# 临时测试
+_importtest/

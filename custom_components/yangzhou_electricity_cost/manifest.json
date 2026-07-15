@@ -4,7 +4,7 @@
   "codeowners": ["@wangmengfan"],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/wangmengfan/swift-registry",
+  "documentation": "https://github.com/swift-registry/homeassistant-Integration",
   "iot_class": "calculated",
   "version": "1.0.0"
 }

@@ -14,7 +14,7 @@
 > HACS 只能添加 **GitHub** 上的仓库。请先将本仓库推送到 GitHub（仓库名建议用 `swift-registry`）。
 
 1. 在 HACS 中点击 `Integrations` -> 右上角菜单 -> `Custom repositories`。
-2. 填入 GitHub 仓库地址 `https://github.com/wangmengfan/swift-registry`，Category 选择 `Integration`。
+2. 填入 GitHub 仓库地址 `https://github.com/swift-registry/homeassistant-Integration`，Category 选择 `Integration`。
 3. 搜索 `Yangzhou Electricity Cost` 并下载安装，重启 Home Assistant。
 4. 重启后进入 `设置` -> `设备与服务` -> `集成` -> 点击 `添加集成`，搜索 `Yangzhou Electricity Cost`。
 5. 在弹出的界面中填写：
