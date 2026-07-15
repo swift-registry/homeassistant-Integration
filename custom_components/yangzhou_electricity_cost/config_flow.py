@@ -5,7 +5,6 @@ from __future__ import annotations
 import voluptuous as vol
 from homeassistant.config_entries import (
     ConfigFlow,
-    ConfigFlowResult,
     OptionsFlow,
 )
 from homeassistant.core import callback
@@ -41,7 +40,7 @@ class YangzhouCostConfigFlow(ConfigFlow):
 
     VERSION = 1
 
-    async def async_step_user(self, user_input=None) -> ConfigFlowResult:
+    async def async_step_user(self, user_input=None):
         """通过 UI 初次添加集成。"""
         errors: dict[str, str] = {}
 
@@ -85,7 +84,7 @@ class YangzhouCostConfigFlow(ConfigFlow):
 class YangzhouCostOptionsFlow(OptionsFlow):
     """选项流（集成配置好后可随时修改）。"""
 
-    async def async_step_init(self, user_input=None) -> ConfigFlowResult:
+    async def async_step_init(self, user_input=None):
         """管理界面主步骤。"""
         if user_input is not None:
             return self.async_create_entry(title="", data=user_input)
