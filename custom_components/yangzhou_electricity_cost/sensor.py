@@ -9,6 +9,7 @@ from homeassistant.components.sensor import SensorEntity
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from homeassistant.helpers.event import async_track_state_change_event
 
 from .const import (
     CONF_NAME,
@@ -111,8 +112,8 @@ class YangzhouCostSensor(SensorEntity):
     async def async_added_to_hass(self) -> None:
         """添加到 HA 后监听源传感器变化。"""
         self.async_on_remove(
-            self.hass.states.async_track_state_change_event(
-                [self._source_sensor], self._async_update_callback
+            async_track_state_change_event(
+                self.hass, [self._source_sensor], self._async_update_callback
             )
         )
         self._update_cost()
